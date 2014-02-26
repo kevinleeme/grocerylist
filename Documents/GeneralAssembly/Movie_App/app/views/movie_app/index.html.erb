@@ -1,0 +1,14 @@
+<h1> Welcome to Retflix. </h1>
+<h3> See all of the movies below </h3>
+
+<ul>
+<% @movieapps.each do |details| %>
+<li>
+	<%= details.name %> :
+	<%= image_tag( details.image ) %>
+	<%= link_to "Movie Details", movie_app_path(details.id) %>
+</li>
+<% end %>
+
+
+</ul>
